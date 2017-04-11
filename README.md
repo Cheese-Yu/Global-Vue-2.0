@@ -63,7 +63,7 @@ The original PSD is included and was provided by [Sergey Melnik](https://www.beh
 ### 更新
 * 图片路径问题已解决</br>
 **解决方式**：项目build后，打开dist中的index.html发现一片空白，控制台提示各种路径错误。别担心，在D盘（随便哪个盘）中新建一个'global'文件夹（注意：一定要在根目录下），将dist中的文件复制到这个文件夹中，再打开index.html，发现一切正常了。<br/>
-**解释**：我修改了config文件夹中的index.js文件的build部分的assetsPublicPath（'/'变成了'/global/'）。如果不改，dist中的文件必须放在某个盘的根目录下，所以你打算放在的文件夹叫什么名字，你就在'/'后面加上'name/'就好了。
+**解释**：我修改了config文件夹中的index.js文件的build部分的assetsPublicPath（'/'变成了'/global/'）。如果不改，dist中的文件必须放在某个盘的根目录下，所以你打算放在的文件夹叫什么名字，你就在'/'后面加上'name/'就好了。***注意：这只是在本地预览，如果要放到服务器上，请将assetsPublicPath改回原来的'/'！***
 ### 小结
 这算是自己第一个从配置到发布成功的小项目，又是研究服务器，又是研究webpack的各种配置，还有很多缺陷和不足。
 ### Contact

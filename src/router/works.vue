@@ -152,14 +152,17 @@
     }
 </style>
 <script type="text/babel">
+import luan from '../assets/luan.jpg'
+import mouse from '../assets/mouse.jpg'
+import yellow from '../assets/yellow.jpg'
 
     export default{
         data(){
             return{
                 banners: [
-                    { imgUrl: './static/img/luan.jpg' ,name: 'Alex Nowak' },
-                    { imgUrl: './static/img/mouse.jpg' ,name: 'Metiew & Smith' },
-                    { imgUrl: './static/img/yellow.jpg' ,name: 'Victory' },
+                    { imgUrl: luan ,name: 'Alex Nowak' },
+                    { imgUrl: mouse ,name: 'Metiew & Smith' },
+                    { imgUrl: yellow ,name: 'Victory' },
                 ],
                 Wmouse: true,
                 Wluan: false,

@@ -91,6 +91,7 @@ export default {
     }
     .g-page {
         width: 100%;
+        min-width: 1364px;
         height: 100%;
         .clearfix();
         position: relative;

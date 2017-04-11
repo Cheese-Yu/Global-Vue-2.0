@@ -7,14 +7,13 @@ The original PSD is included and was provided by [Sergey Melnik](https://www.beh
 ### 简介
 * 这是一个使用Vue2.0、Vue-cli、Vue-router完成的单页应用，可以正常在服务器中运行，[点击预览preview](http://www.cheeseyu.tk/)。</br>
 (没有做过优化，可能打开有点慢。。。苦逼实习生只有笔记本，没做大屏幕适配，希望它一切正常(╥╯^╰╥))
-* Webpack 还没怎么研究过，对于图片引用路径存在一些问题。
 ### 目录结构
     ├── build                       // webpack相关配置文件
     │   ├── 
-    │   ├── webpack.base.conf.js    // 主要是和dev/build有关的配置（我貌似只改了这一个文件）           
+    │   ├── webpack.base.conf.js    //添加了抽离第三方库的方法           
     │   ├──         
     │   └── 
-    ├── config                      // 和dev有关的配置
+    ├── config                      // 修改了其中的index.js文件中的build配置
     ├── dist                        // build后的文件在这里
     ├── src                         // 生产目录
     │   ├── assets
@@ -61,13 +60,10 @@ The original PSD is included and was provided by [Sergey Melnik](https://www.beh
 * vue-loader: 11.1.4
 * Webpack: 2.2.1
 * Node 6.9.1
-### 主要问题介绍
-* 图片引用路径在html css js 中打包后的效果都不同。</br>
-**解决方式**：将图片统一在css中加载，html中不放图片路径
-* build后图片文件位置和引用的地址不匹配。</br>
-**解决方式**：手动将图片文件挪到正确的位置。（略惨，有大神能指导一下不胜感激。）
-* 第三方库文件过大，加载太慢。</br>
-**解决方式**：在webpack的配置文件中抽离第三方库，不打包第三方库，然后在html头中引用。当然也可以放在自己的cdn上，然而我没买。。。
+### 更新
+* 图片路径问题已解决</br>
+**解决方式**：项目build后，打开dist中的index.html发现一片空白，控制台提示各种路径错误。别担心，在D盘（随便哪个盘）中新建一个'global'文件夹（注意：一定要在根目录下），将dist中的文件复制到这个文件夹中，再打开index.html，发现一切正常了。<br/>
+**解释**：我修改了config文件夹中的index.js文件的build部分的assetsPublicPath（'/'变成了'/global/'）。如果不改，dist中的文件必须放在某个盘的根目录下，所以你打算放在的文件夹叫什么名字，你就在'/'后面加上'name/'就好了。
 ### 小结
 这算是自己第一个从配置到发布成功的小项目，又是研究服务器，又是研究webpack的各种配置，还有很多缺陷和不足。
 ### Contact

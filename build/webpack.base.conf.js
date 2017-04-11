@@ -14,10 +14,9 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: './'  //build时用这个地址
-    // publicPath: process.env.NODE_ENV === 'production'  //dev时用这个地址
-    //   ? config.build.assetsPublicPath
-    //   : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production'
+      ? config.build.assetsPublicPath
+      : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -43,8 +42,7 @@ module.exports = {
         loader: 'url-loader',
         query: {
           limit: 10000,
-          // name: ('img/[name].[hash:7].[ext]')  //开发路径
-          name: ('./../img/[name].[hash:7].[ext]')  //生产路径，开发和生产的路径不一样
+          name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
       {
@@ -52,7 +50,7 @@ module.exports = {
         loader: 'file-loader',
         query: {
           limit: 10000,
-          name: ('../fonts/[name].[hash:7].[ext]')  //路径同理，自己尝试改改
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
     ]

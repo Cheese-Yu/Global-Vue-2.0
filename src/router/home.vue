@@ -5,7 +5,7 @@
                 <h1>Your next<br>interactive<br>experience</h1>
                 <button><router-link :to="{ name: 'us' }">HIRE US &#10140<span class="btn-bg"></span></router-link></button>
             </div>
-            <div class="astro"></div>
+            <img class="astro" src="../assets/astronaut.png">
         </div>
         <div class="options">
             <div class="item">
@@ -84,7 +84,6 @@
         height: 460px;
         width: 509px;
         display: block;
-        background: url("./../assets/astronaut.png");
         right: -10px;
         top: -38px;
         z-index: 1000;

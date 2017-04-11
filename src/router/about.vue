@@ -50,7 +50,7 @@
             border-radius: 50%;
             background: #f1c40f;
             top: 63px;
-            left: 337px;
+            left: 347px;
         }
         .diamond {
             position: absolute;
@@ -76,7 +76,7 @@
             height: 12px;
             width: 12px;
             background: #f1c40f;
-            right: 120px;
+            right: 130px;
             bottom: 82px;
         }
         a {
@@ -99,7 +99,7 @@
         position: absolute;
         width: 392px;
         height: 631px;
-        background: url("./../assets/hack.png");
+        background: url("../assets/hack.png");
         top: -100px;
         right: 100px;
         z-index: -2;

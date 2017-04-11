@@ -67,4 +67,5 @@ The original PSD is included and was provided by [Sergey Melnik](https://www.beh
 ### 小结
 这算是自己第一个从配置到发布成功的小项目，又是研究服务器，又是研究webpack的各种配置，还有很多缺陷和不足。
 ### Contact
+Blog：[cheeseyu.cn](https://cheeseyu.cn)</br>
 微博：[El-pescado](http://weibo.com/u/5146043042?refer_flag=1001030101_&is_all=1)
